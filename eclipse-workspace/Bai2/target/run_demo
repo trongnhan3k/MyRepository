@@ -1,0 +1,12 @@
+#!/bin/bash
+pathrunjob=/home/bubu/eclipse-workspace/demo-build/target
+timesleep=5s
+
+for (( ; ; ));
+do
+  hour=`date +"%H"`
+  cd $pathrunjob
+  java -jar demo-build-0.0.1-SNAPSHOT-run.jar
+  echo -e "Current time: `date`"
+  sleep $timesleep
+done
